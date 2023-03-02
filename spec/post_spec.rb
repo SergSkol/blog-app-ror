@@ -21,4 +21,8 @@ RSpec.describe Post, type: :model do
     subject.likes_counter = -1
     expect(subject).to_not be_valid
   end
+
+  it 'Title must not exceed 250 characters' do
+    expect(subject.title.length).to be <= 250
+  end
 end
