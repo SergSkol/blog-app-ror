@@ -45,6 +45,12 @@
   </ul>
 </details>
 
+### Key Features <a name="key-features"></a>
+
+- **Create a post**
+- **Add a Comment to a post**
+- **Like a post**
+
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
@@ -66,8 +72,8 @@ Clone this repository to your desired folder:
 Example commands:
 
 ```sh
-  cd my-folder
-  git clone git@github.com:myaccount/my-project.git
+  cd blog-app-ror
+  git clone git@github.com:sergskol/blog-app-ror.git
 ```
 -
 
@@ -78,10 +84,9 @@ Install this project with:
 Example command:
 
 ```sh
-  cd my-project
-  ruby main.rb
+  cd blog-app-ror
+  bundle install
 ```
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
