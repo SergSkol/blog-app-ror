@@ -4,9 +4,9 @@
 
 <div class="user-container">
   <img src= "<%=user.photo%>" alt="photo of user"/>
-  <div class="user-name">
-    <p><%=user.name%></p>
-    <p>Number of posts: <%= user.post_counter%></p>
+  <div class="user-name-box">
+    <p class="user-name"><%=user.name%></p>
+    <p class="user-number-of-posts">Number of posts: <%= user.post_counter || 0%></p>
   </div>
 </div>
 
@@ -15,8 +15,9 @@
     <div class="post-container">
       <p>Post #<%=post.id%>: <%= link_to "#{post.title}", "#{user_posts_path}/#{post.id}" %></p>
       <p><%=post.text[0..100]%>...</p>
-      <p>Comments: <%= post.comments_counter%></p>
-      <p>Likes: <%= post.likes_counter%></p>
+      <div class="post-comments-likes"> 
+        <p>Comments: <%= post.comments_counter || 0%>, Likes: <%= post.likes_counter || 0%></p>
+      </div>
     </div>
 
     <div class="comments-container">

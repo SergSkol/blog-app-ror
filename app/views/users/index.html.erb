@@ -3,10 +3,9 @@
 
   <div class="user-container">
     <img src= "<%=user.photo%>" alt="photo of user"/>
-    <p></p>
-    <div class="user-name">
-      <%= link_to "#{user.name}", "#{users_path}/#{user.id}" %>
-      <p>Number of posts: <%= user.post_counter%></p>
+    <div class="user-name-box">
+      <p class="user-name"><%= link_to "#{user.name}", "#{users_path}/#{user.id}" %></p>
+      <p class="user-number-of-posts">Number of posts: <%= user.post_counter  || 0%></p>
     </div>
   </div>
 

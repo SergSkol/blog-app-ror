@@ -4,9 +4,10 @@
 <%user = @user%>
 
 <div class="post-container">
-  <p>Post #<%=post.id%> by <%=user.name%></p>
-  <p>Comments: <%= post.comments_counter%></p>
-  <p>Likes: <%= post.likes_counter%></p>
+  <p>Post #<%=post.id%> by <%=user.name%>: <%=post.title%></p>
+  <div class="post-comments-likes"> 
+    <p>Comments: <%= post.comments_counter || 0%>, Likes: <%= post.likes_counter || 0%></p>
+  </div>
   <p><%=post.text%></p>
 </div>
 

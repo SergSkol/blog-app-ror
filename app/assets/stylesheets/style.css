@@ -10,19 +10,46 @@ body {
 }
 
 .user-container img {
-  width: 100px; 
+  width: 100px;
   height: 100%;
 }
 
-.user-name {
+.user-name-box {
   display: flex;
-  border: 1px solid
+  border: 1px solid;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.user-name-box a {
+  margin: 16px 0 0 16px;
+  font-size: 32px;
+}
+
+.user-name {
+  margin: 16px 0 0 16px;
+  font-size: 32px;
+}
+
+.user-number-of-posts {
+  align-self: flex-end;
 }
 
 .user-bio {
-  border: 1px solid
+  border: 1px solid;
 }
 
 .post-container {
-  border: 1px solid
+  border: 1px solid;
+  margin: 16px 0;
+}
+
+.post-comments-likes {
+  display: flex;
+  justify-content: end;
+}
+
+.see-all-posts-btn {
+  text-align: center;
+  margin: 16px;
 }
