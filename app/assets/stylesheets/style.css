@@ -1,0 +1,28 @@
+body {
+  max-width: 512px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
+}
+
+.user-container {
+  display: flex;
+}
+
+.user-container img {
+  width: 100px; 
+  height: 100%;
+}
+
+.user-name {
+  display: flex;
+  border: 1px solid
+}
+
+.user-bio {
+  border: 1px solid
+}
+
+.post-container {
+  border: 1px solid
+}
