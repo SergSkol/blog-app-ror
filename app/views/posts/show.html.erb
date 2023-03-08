@@ -1,2 +1,23 @@
 <h1>Here is a details of post</h1>
-<a href="../../"><< back </a>
+
+<%post = @post%>
+<%user = @user%>
+
+<div class="post-container">
+  <p>Post #<%=post.id%> by <%=user.name%>: <%=post.title%></p>
+  <div class="post-comments-likes"> 
+    <p>Comments: <%= post.comments_counter || 0%>, Likes: <%= post.likes_counter || 0%></p>
+  </div>
+  <p><%=post.text%></p>
+</div>
+
+<div class="comments-container">
+  <% Comment.where(post_id:post.id).each do |comment| %>
+    <div class="comment-container">
+      <%author = User.find_by(id: comment.author_id)%>
+      <p><%=author.name%>: <%=comment.text[0..100]%>...</p>
+    </div>
+  <% end %>
+</div>
+
+<a href="../../"><< home </a>
