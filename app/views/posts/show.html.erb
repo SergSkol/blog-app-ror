@@ -11,13 +11,23 @@
   <p><%=post.text%></p>
 </div>
 
+<div>
+  <p><%= link_to "Create new comment", "./#{post.id}/comments/new" %></p>
+</div>
+
+<div>
+  <%= form_with url: "./#{@post.id}/likes", scope: :like do |form| %>
+    <%= form.submit "Like "%>
+  <% end %>
+</div>
+
 <div class="comments-container">
   <% Comment.where(post_id:post.id).each do |comment| %>
     <div class="comment-container">
       <%author = User.find_by(id: comment.author_id)%>
-      <p><%=author.name%>: <%=comment.text[0..100]%>...</p>
+      <p><%=author.name%>: <%=comment.text%></p>
     </div>
   <% end %>
 </div>
 
-<a href="../../"><< home </a>
+<a href="/"><< home </a>
