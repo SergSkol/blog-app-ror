@@ -21,7 +21,12 @@ RSpec.describe 'UsersController', type: :request do
 
   context 'GET request to show' do
     before(:example) do
-      get '/users/1'
+      @user = User.create!(name: 'Sergiy',
+                           photo: 'https://picsum.photos/id/0/5000/3333',
+                           bio: 'Student of Microverse',
+                           post_counter: 0)
+
+      get "/users/#{@user.id}"
     end
 
     it 'response status is ok' do

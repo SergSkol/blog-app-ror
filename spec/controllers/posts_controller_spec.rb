@@ -3,7 +3,18 @@ require 'rails_helper'
 RSpec.describe 'PostsController', type: :request do
   context 'GET request to index' do
     before(:example) do
-      get '/users/1/posts'
+      @user = User.create!(name: 'Sergiy',
+                           photo: 'https://picsum.photos/id/0/5000/3333',
+                           bio: 'Student of Microverse',
+                           post_counter: 0)
+
+      @post = Post.create!(title: 'Test post title',
+                           text: 'Test post text',
+                           author_id: @user.id,
+                           comments_counter: 0,
+                           likes_counter: 0)
+
+      get "/users/#{@user.id}/posts"
     end
 
     it 'response status is ok' do
@@ -19,9 +30,20 @@ RSpec.describe 'PostsController', type: :request do
     end
   end
 
-  context 'GET request to show' do
+  context 'GET request to index' do
     before(:example) do
-      get '/users/1/posts/1'
+      @user = User.create!(name: 'Sergiy',
+                           photo: 'https://picsum.photos/id/0/5000/3333',
+                           bio: 'Student of Microverse',
+                           post_counter: 0)
+
+      @post = Post.create!(title: 'Test post title',
+                           text: 'Test post text',
+                           author_id: @user.id,
+                           comments_counter: 0,
+                           likes_counter: 0)
+
+      get "/users/#{@user.id}/posts/#{@post.id}"
     end
 
     it 'response status is ok' do
