@@ -61,7 +61,7 @@ RSpec.describe 'On post view', type: :system do
 
     it 'When I click on a post, it redirects me to that post`s show page' do
       visit user_posts_path(@user)
-      click_link('Test post title')
+      find("a[href='#{user_post_path(@user, @post)}']").click
       expect(page).to have_current_path(user_post_path(@user, @post))
     end
   end
