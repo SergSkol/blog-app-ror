@@ -11,7 +11,7 @@
 </div>
 
 <div class="posts-container">
-  <% Post.where(author_id:user.id).each do |post| %>
+  <% @posts.each do |post| %>
     <div class="post-container">
       <p>Post #<%=post.id%>: <%= link_to "#{post.title}", "#{user_posts_path}/#{post.id}" %></p>
       <p><%=post.text[0..100]%>...</p>
