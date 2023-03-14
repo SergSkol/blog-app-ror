@@ -23,5 +23,10 @@ RSpec.describe 'User views', type: :system do
       visit users_path
       expect(page).to have_css('img')
     end
+
+    it 'When I click on a user, I am redirected to that user\'s show page' do
+      visit users_path(@user)
+      expect(current_path).to eq(users_path(@user))
+    end
   end
 end
