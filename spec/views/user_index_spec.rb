@@ -2,13 +2,11 @@ require 'rails_helper'
 
 RSpec.describe 'User views', type: :system do
   describe 'users index page' do
-
     before(:example) do
-      @user = User.create!(name:'Sergiy',
-        photo: 'https://picsum.photos/id/0/5000/3333',
-        bio: 'Student of Microverse',
-        post_counter: 0
-      )
+      @user = User.create!(name: 'Sergiy',
+                           photo: 'https://picsum.photos/id/0/5000/3333',
+                           bio: 'Student of Microverse',
+                           post_counter: 0)
     end
 
     it 'I can see the right header' do
