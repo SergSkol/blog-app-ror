@@ -3,6 +3,8 @@ body {
   margin: 0 auto;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #fff;
+  justify-content: center;
+  text-align: center;
 }
 
 .user-container {
@@ -52,4 +54,31 @@ body {
 .see-all-posts-btn {
   text-align: center;
   margin: 16px;
+}
+
+.sign-up-container,
+.log-in-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.new_user {
+  width: 100%;
+}
+
+.actions,
+.notice,
+.alert,
+.button_to,
+.field {
+  text-align: center;
+}
+
+.field input {
+  width: 80%;
+}
+
+#user_remember_me {
+  width: 10px;
 }
