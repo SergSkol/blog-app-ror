@@ -15,11 +15,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(params.require(:post)
-      .permit(:title, :text)
-      .merge(author_id: current_user.id,
-             comments_counter: 0,
-             likes_counter: 0))
+    @post = Post.new(post_params)
     respond_to do |format|
       format.html do
         if @post.save
@@ -31,6 +27,14 @@ class PostsController < ApplicationController
         end
       end
     end
+  end
+
+  def post_params
+    params.require(:post)
+      .permit(:title, :text)
+      .merge(author_id: current_user.id,
+             comments_counter: 0,
+             likes_counter: 0)
   end
 
   def show
