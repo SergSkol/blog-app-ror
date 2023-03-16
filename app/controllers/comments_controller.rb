@@ -4,11 +4,10 @@ class CommentsController < ApplicationController
   def index
     @user = User.find(params[:user_id])
     @post = Post.find(params[:post_id])
-    # @comments = Comment.includes(:user, :post)
     @comments = Comment.where(post: @post)
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html
       format.json { render json: @comments }
     end
   end
@@ -17,6 +16,7 @@ class CommentsController < ApplicationController
     @comment = Comment.new
     respond_to do |format|
       format.html { render :new, locals: { comment: @comment } }
+      format.json { head :no_content }
     end
   end
 
@@ -24,8 +24,7 @@ class CommentsController < ApplicationController
     @user = current_user
     @post = Post.find(params[:post_id])
     @comment = Comment.new(comment_params)
-    # @comment = @post.comments.new(text: comment_params[:text], post_id: @post.id)
-    # @comment.author_id = current_user.id
+
     respond_to do |format|
       format.html do
         if @comment.save
