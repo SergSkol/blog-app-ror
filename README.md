@@ -72,10 +72,9 @@ Clone this repository to your desired folder:
 Example commands:
 
 ```sh
-  cd blog-app-ror
   git clone git@github.com:sergskol/blog-app-ror.git
+  cd blog-app-ror
 ```
--
 
 ### Install
 
@@ -86,6 +85,7 @@ Example command:
 ```sh
   cd blog-app-ror
   bundle install
+  rails db:migrate
 ```
 ### Usage
 
