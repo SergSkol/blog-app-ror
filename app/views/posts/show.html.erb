@@ -21,11 +21,18 @@
   <% end %>
 </div>
 
+<% if can? :destroy, post %>
+ <%= button_to 'Delete post', user_post_path(@user, @post), method: :delete %>
+<%end%>
+
 <div class="comments-container">
   <% Comment.where(post_id:post.id).each do |comment| %>
     <div class="comment-container">
       <%author = User.find_by(id: comment.author_id)%>
       <p><%=author.name%>: <%=comment.text%></p>
+      <% if can? :destroy, comment %>
+        <%= button_to 'Delete comment', user_post_comment_path(comment.author_id, comment.post, comment), method: :delete %>
+      <%end%>
     </div>
   <% end %>
 </div>

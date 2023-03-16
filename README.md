@@ -18,7 +18,7 @@
 
 # 📖 Blog application <a name="about-project"></a>
 
-> The Blog app is a classic example of a blog website. There was created a fully functional website that shows the list of posts and empower readers to interact with them by adding comments and liking posts.
+> The Blog app is a classic example of a blog website. There was created a fully functional website that shows the list of posts and empower readers to interact with them by adding comments and liking posts. In this project, we added authorization to the app using CanCanCan.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -34,7 +34,7 @@
 <details>
   <summary>Server</summary>
   <ul>
-    <li><a href="https://guides.rubyonrails.org/index.html">Ruby on Rails</a></li>
+    <li><a href="https://guides.rubyonrails.org/index.html">Rails</a></li>
   </ul>
 </details>
 
@@ -47,8 +47,9 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **Create a post**
-- **Add a Comment to a post**
+- **Sign-in / Log-in**
+- **Create / delete a post**
+- **Add / delete a comment to a post**
 - **Like a post**
 
 <!-- GETTING STARTED -->
@@ -61,9 +62,8 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need:
 
-- Command line or terminal
-- IDE such as VSCode. 
-- Ruby on Rails needs to be installed on your system.
+- Install ruby on your computer or run in with docker
+- Have rails installed on your computer
 
 ### Setup
 
@@ -72,10 +72,9 @@ Clone this repository to your desired folder:
 Example commands:
 
 ```sh
-  cd blog-app-ror
   git clone git@github.com:sergskol/blog-app-ror.git
+  cd blog-app-ror
 ```
--
 
 ### Install
 
@@ -86,13 +85,19 @@ Example command:
 ```sh
   cd blog-app-ror
   bundle install
+  rails db:migrate
 ```
+### Usage
+
+To run the project, execute the following command:
+
+`rails server`
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHOR -->
 
-## 👥 Author <a name="authors"></a>
+## 👥 Authors <a name="authors"></a>
 
 👤 **Sergiy Shkolnik**
 
@@ -100,9 +105,15 @@ Example command:
 - Twitter: [@sps676](https://twitter.com/sps676)
 - LinkedIn: [SergSkol](https://www.linkedin.com/in/sergskol/)
 
+👤 **George William Kidde**
+
+- GitHub: [@George William Kidde](https://github.com/kidde60)
+- Twitter: [@professorKGW](https://twitter.com/professorKGW)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/george-william-kidde/)
 
 ## 🔭 Future Features <a name="future-features"></a>
 
+- [ ] **Add More methods**
 - [ ] **Add presentation of this project**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -113,7 +124,7 @@ Example command:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](../../../issues/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

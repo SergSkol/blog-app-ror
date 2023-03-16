@@ -56,6 +56,10 @@ body {
   margin: 16px;
 }
 
+.comment-container {
+  border: 1px solid #f00;
+}
+
 .sign-up-container,
 .log-in-container {
   display: flex;

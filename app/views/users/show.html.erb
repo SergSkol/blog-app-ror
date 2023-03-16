@@ -15,7 +15,7 @@
 </div>
 
 <div>
-  <p><%= link_to "Create new post", "./#{user.id}/posts/new" %></p>
+  <button><%= link_to 'Create new post', new_user_post_path(user_id: @user.id) %></button>
 </div>
 
 <div class="posts-container">

@@ -75,6 +75,7 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
 end
 
+gem 'cancancan'
 gem 'devise'
 gem 'rails-controller-testing'
 gem 'rubocop', '>= 1.0', '< 2.0'
