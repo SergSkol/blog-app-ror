@@ -24,6 +24,7 @@ class CommentsController < ApplicationController
     @user = current_user
     @post = Post.find(params[:post_id])
     @comment = Comment.new(comment_params)
+    # @comment = @post.comments.new(text: comment_params[:text], post_id: @post.id)
     # @comment.author_id = current_user.id
     respond_to do |format|
       format.html do
