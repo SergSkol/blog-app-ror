@@ -1,4 +1,17 @@
 class CommentsController < ApplicationController
+  load_and_authorize_resource
+
+  def index
+    @user = User.find(params[:user_id])
+    @post = Post.find(params[:post_id])
+    @comments = Comment.includes(:user, :post)
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render :json => @comments }
+    end
+  end
+
   def new
     @comment = Comment.new
     respond_to do |format|
