@@ -18,7 +18,7 @@
 
 # 📖 Blog application <a name="about-project"></a>
 
-> The Blog app is a classic example of a blog website. There was created a fully functional website that shows the list of posts and empower readers to interact with them by adding comments and liking posts. In this project, we added authorization to the app using CanCanCan.
+> The Blog app is a classic example of a blog website. There was created a fully functional website that shows the list of posts and empower readers to interact with them by adding comments and liking posts. In this project, we added API endpoints for posts and comments.
 
 ## 🛠 Built With <a name="built-with"></a>
 
