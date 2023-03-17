@@ -1,7 +1,5 @@
 module Api
   class Api::CommentsController < ApiController
-    # load_and_authorize_resource
-
     def index
       @user = User.find(params[:user_id])
       @post = Post.find(params[:post_id])
